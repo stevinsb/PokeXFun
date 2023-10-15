@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Poke.X.Fun</title>
+    <style>
+        h1, h2 {
+            font-family: Georgia, sans-serif;
+        }
+
+        /* Set the font style for the buttons */
+        button {
+            display: block;
+            width: 150px;
+            height: 50px;
+            margin: 5px auto;
+            font-family: "Arial", sans-serif; /* Replace "Arial" with your desired font name */
+            font-weight: bold;
+        }
+
+        body {
+            background-color: #FFD54F;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Styles for the Google Form Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img src='GDSC_Logo_Horizontal_1 (1).png' alt="" width="642" height="198">
+    <h1>Welcome to Poke.X.Fun</h1>
+    <h3>Please select your option</h3>
+    <button id="button1" onclick="showGoogleForm()">Mewtwo Masterstrokes</button>
+    <button id="button2" onclick="showGoogleForm()"> PikaPose</button>
+    <button id="button3" onclick="showGoogleForm()">PokeMind</button>
+
+    <!-- Google Form Modal -->
+    <div id="googleFormModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeGoogleForm()">&times;</span>
+            <iframe src="https://forms.gle/bb2qfHYKstnfHko69" frameborder="0" width="100%" height="500"></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Function to show the Google Form
+        function showGoogleForm() {
+            var modal = document.getElementById('googleFormModal');
+            modal.style.display = 'block';
+        }
+
+        // Function to close the Google Form
+        function closeGoogleForm() {
+            var modal = document.getElementById('googleFormModal');
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
