@@ -61,22 +61,24 @@
     <img src='GDSC_Logo_Horizontal_1 (1).png' alt="" width="642" height="198">
     <h1>Welcome to Poke.X.Fun</h1>
     <h3>Please select your option</h3>
-    <button id="button1" onclick="showGoogleForm()">Mewtwo Masterstrokes</button>
-    <button id="button2" onclick="showGoogleForm()"> PikaPose</button>
-    <button id="button3" onclick="showGoogleForm()">PokeMind</button>
+    <button id="button1" onclick="showGoogleForm('https://forms.gle/icvGt5ZheK4PiSM3A')">Mewtwo Masterstrokes</button>
+    <button id="button2" onclick="showGoogleForm('https://forms.gle/bb2qfHYKstnfHko69')">PikaPose</button>
+    <button id="button3" onclick="showGoogleForm('https://forms.gle/if3mgeBeNTHkGE38A')">PokeMind</button>
 
     <!-- Google Form Modal -->
     <div id="googleFormModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeGoogleForm()">&times;</span>
-            <iframe src="https://forms.gle/bb2qfHYKstnfHko69" frameborder="0" width="100%" height="500"></iframe>
+            <iframe id="googleForm" frameborder="0" width="100%" height="500"></iframe>
         </div>
     </div>
 
     <script>
         // Function to show the Google Form
-        function showGoogleForm() {
+        function showGoogleForm(formUrl) {
             var modal = document.getElementById('googleFormModal');
+            var iframe = document.getElementById('googleForm');
+            iframe.src = formUrl;
             modal.style.display = 'block';
         }
 
